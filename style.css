@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #f77021 ;
+  color: #fff;
+}
+
+::selection {
+  background-color: #f77021 ;
+  color: #fff;
+}
+
+.di-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.di-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.di-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.di-mobile-title {
+  display: none !important;
+}
+
+/*important*/
+.di-logo-image {
+  height: 80px; width: 200px;
+}
+
+
+.di-header {
+  overflow: visible;
+  background-color: white;
+}
+
+  .di-header .material-icons {
+    color: #f77021  !important;
+  }
+
+  .di-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #2196F3;
+  }
+
+  .di-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .di-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .di-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .di-search-box.is-focused + .di-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .di-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .di-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #f77021;
+    }
+
+  .di-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+/*important*/
+  .di-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+/*important complete drawer class*/
+.di-drawer {
+  border-right: none;
+}
+
+
+.di-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .di-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .di-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+  }
+
+  .di-drawer .mdl-layout-title {
+    position: relative;
+    background: transparent;
+    height: 150px;
+  }
+
+    .di-drawer .di-logo-image {
+      position: absolute;
+      left: 20px;
+      top: 30px;
+    }
+
+@media (max-width: 900px) {
+  .di-navigation-container {
+    display: none;
+  }
+
+  .di-title {
+    display: none !important;
+  }
+
+  .di-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .di.di-search-box.is-focused ~ .di-mobile-title,
+  .di-search-box.is-focused + .di-navigation-container + .di-mobile-title {
+    opacity: 0;
+  }
+
+  .di-more-button {
+    display: none;
+  }
+
+  .di-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .di-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+}
+
+p{
+  font-size: 20px;
+}
